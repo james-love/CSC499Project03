@@ -10,6 +10,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.Hands
     /// </summary>
     public class HandsAndControllersManager : MonoBehaviour
     {
+        public bool TrackingLeftHand => m_LeftHand.activeSelf;
+
         [SerializeField]
         [Tooltip("GameObject to toggle on when the left hand is tracked and off when it is not tracked.")]
         GameObject m_LeftHand;
