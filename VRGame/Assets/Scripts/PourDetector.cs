@@ -21,12 +21,12 @@ public class PourDetector : MonoBehaviour
 
             if (isPouring)
             {
-                print("Start");
+                
                 StartPour();
             }
             else
             {
-                print("end");
+                
                 EndPour();
             }
         }
@@ -34,19 +34,20 @@ public class PourDetector : MonoBehaviour
 
     private void StartPour()
     {
-        
+        currentStream = CreateStream();
+        currentStream.Begin();
     }
 
     private void EndPour()
     {
-
+        currentStream.End();
+        currentStream = null;
 
     }
 
     private float CalculatePourAngle()
     {
         float currentRotation = Mathf.Sqrt(Mathf.Pow(transform.rotation.x, 2) + Mathf.Pow(transform.rotation.z, 2)) * Mathf.Rad2Deg;
-        print(currentRotation);
         return currentRotation;
     }
 
