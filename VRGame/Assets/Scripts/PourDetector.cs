@@ -8,9 +8,15 @@ public class PourDetector : MonoBehaviour
     public Transform origin = null;
     public GameObject streamPrefab = null;
 
+    public string content;
     private bool isPouring = false;
     private Stream currentStream = null;
+    private Vector3 startPos;
 
+    private void Awake()
+    {
+        startPos = transform.position;
+    }
     private void Update()
     {
         bool pourCheck = CalculatePourAngle() > pourThreshold;
@@ -55,7 +61,16 @@ public class PourDetector : MonoBehaviour
     {
         GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
         streamObject.AddComponent<CapsuleCollider>();
-        streamObject.GetComponent<CapsuleCollider>().isTrigger = true;
+        streamObject.GetComponent<CapsuleCollider>().isTrigger = false;
+        streamObject.transform.tag = content;
         return streamObject.GetComponent<Stream>();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "Cup")
+        {
+            transform.position = startPos;
+        }
     }
 }

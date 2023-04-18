@@ -37,6 +37,7 @@ public class Stream : MonoBehaviour
 
             MoveToPosition(0, transform.position);
             AnimateToPosition(1, targetPosition);
+            GetComponent<CapsuleCollider>().center = targetPosition;
 
             yield return null;
 
@@ -75,6 +76,7 @@ public class Stream : MonoBehaviour
     private void MoveToPosition(int index,Vector3 targetPosition)
     {
         lineRenderer.SetPosition(index, targetPosition);
+        //gameObject.GetComponent<CapsuleCollider>().center = Vector3.zero;
     }
 
     private void AnimateToPosition(int index, Vector3 targetPosition)
