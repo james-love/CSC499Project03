@@ -33,9 +33,5 @@ public class CupContainer : MonoBehaviour
                 print("Added to cup");
             }
         }
-        foreach(string content in contents)
-        {
-            print(content);
-        }
     }
 }
