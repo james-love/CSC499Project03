@@ -70,7 +70,7 @@ public class Request : MonoBehaviour
             }
         }
             
-        return (float)score/maxScore;
+        return (float)score/maxScore*100;
     }
 
 }
