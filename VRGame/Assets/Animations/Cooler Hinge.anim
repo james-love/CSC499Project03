@@ -74,23 +74,7 @@ AnimationClip:
     path: Lid
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves:
-  - curve:
-    - time: 0.56666666
-      value: {fileID: 2100000, guid: ea470ab7b6b5f524880693946256436d, type: 2}
-    attribute: m_Materials.Array.data[0]
-    path: Cube
-    classID: 23
-    script: {fileID: 0}
-  - curve:
-    - time: 0
-      value: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-    - time: 0.56666666
-      value: {fileID: 2100000, guid: ea470ab7b6b5f524880693946256436d, type: 2}
-    attribute: m_Materials.Array.data[0]
-    path: Lid
-    classID: 23
-    script: {fileID: 0}
+  m_PPtrCurves: []
   m_SampleRate: 30
   m_WrapMode: 0
   m_Bounds:
@@ -106,20 +90,6 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2429296262
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 23
-      customType: 21
-      isPPtrCurve: 1
-    - serializedVersion: 2
-      path: 2015483929
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 23
-      customType: 21
-      isPPtrCurve: 1
-    - serializedVersion: 2
       path: 4201620395
       attribute: 1
       script: {fileID: 0}
@@ -133,10 +103,7 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
-    pptrCurveMapping:
-    - {fileID: 2100000, guid: ea470ab7b6b5f524880693946256436d, type: 2}
-    - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-    - {fileID: 2100000, guid: ea470ab7b6b5f524880693946256436d, type: 2}
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
