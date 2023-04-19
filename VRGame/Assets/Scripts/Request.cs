@@ -7,14 +7,10 @@ public class Request : MonoBehaviour
 {
     public List<string> request = new List<string>();
     // Start is called before the first frame update
-    void Start()
-    {
-        request.Add("Vodka");
-    }
-
+    
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.tag == "Cup")
+        if(other.transform.CompareTag("Cup"))
         {
             other.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             other.transform.rotation = Quaternion.identity;
