@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 public class PourDetector : MonoBehaviour
 {
@@ -70,7 +69,9 @@ public class PourDetector : MonoBehaviour
     {
         if(collision.transform.tag == "Cup")
         {
+            gameObject.SetActive(false);
             transform.position = startPos;
+            gameObject.SetActive(true);
         }
     }
 }
