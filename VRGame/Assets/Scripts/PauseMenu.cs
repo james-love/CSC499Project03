@@ -15,8 +15,11 @@ public class PauseMenu : MonoBehaviour
     private bool openMenu = false;
     public void ExitClicked()
     {
+#if UNITY_EDITOR
         EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
     }
 
     public void MusicMuteClicked()
@@ -40,7 +43,7 @@ public class PauseMenu : MonoBehaviour
 
     private void MenuPressed(CallbackContext context)
     {
-        if (context.started)
+        if (context.started && !handManager.TrackingLeftHand)
             openMenu = !openMenu;
     }
 
