@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,12 +6,7 @@ public class CupContainer : MonoBehaviour
 {
     [SerializeField] public List<string> contents = new List<string>();
     [SerializeField] GameObject fill;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject colorChange;
 
     // Update is called once per frame
     void Update()
@@ -26,21 +21,20 @@ public class CupContainer : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void MixColor(Color othercolor)
     {
-        //determines if liquid is already in cup, and added if it is not in the cup.
-        if (collision.transform.tag == "Liquid")
+        var rend = colorChange.GetComponent<Renderer>();
+        if (contents.Count == 0)
         {
-            if (contents.Contains(collision.gameObject.GetComponent<PourDetector>().content))
-            {
-                print("its already in the cup");
-            }
-            else
-            {
-                contents.Add(collision.gameObject.GetComponent<PourDetector>().content);
-                print("Added to cup");
-            }
+            rend.material.color = othercolor;
         }
+        else {
+            var newcolor = Color.Lerp(othercolor, rend.material.color, 0.5f);
+            rend.material.color = newcolor;
+        }
+        
     }
+
+    
     
 }

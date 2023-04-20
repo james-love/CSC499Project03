@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 5019515232960692533}
   m_Layer: 0
   m_Name: Beer
-  m_TagString: Untagged
+  m_TagString: Cup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329874938328884609}
-  m_LocalRotation: {x: 0.00000008307495, y: -3.498407e-14, z: -0.00000042111455, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.78886}
   m_ConstrainProportionsScale: 0
@@ -2348,7 +2348,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4828
+  m_VersionIndex: 4831
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2463,6 +2463,7 @@ MonoBehaviour:
   contents:
   - Beer
   fill: {fileID: 329874938328884609}
+  colorChange: {fileID: 329874938328884609}
 --- !u!114 &1987053633238125531
 MonoBehaviour:
   m_ObjectHideFlags: 0
