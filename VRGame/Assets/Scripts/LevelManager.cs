@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -50,7 +51,8 @@ public class LevelManager : MonoBehaviour
             default:
                 break;
         }
-
+        Player.Instance.gameObject.GetComponentInChildren<XROrigin>().gameObject.transform.localPosition = Vector3.zero;
+        Player.Instance.gameObject.GetComponentInChildren<XROrigin>().gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
         fadeTransition.SetTrigger("Loaded");
         Loading = false;
         Time.timeScale = 1;

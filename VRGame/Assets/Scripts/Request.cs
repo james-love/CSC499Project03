@@ -14,6 +14,7 @@ public class Request : MonoBehaviour
     [SerializeField] CanvasGroup requestCanvas;
     [SerializeField] TextMeshProUGUI requestText;
     public UnityEvent<bool> requestFinished;
+    private bool done = false;
     private Animator leave;
     // Start is called before the first frame update
 
@@ -35,8 +36,9 @@ public class Request : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.CompareTag("Cup"))
+        if (!done && other.transform.CompareTag("Cup"))
         {
+            done = true;
             other.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             other.transform.rotation = Quaternion.identity;
             other.GetComponent<Rigidbody>().freezeRotation = true;

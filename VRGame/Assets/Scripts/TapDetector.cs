@@ -67,4 +67,9 @@ public class TapDetector : MonoBehaviour
         if (grabbable && !inHand)
             deactivate();
     }
+
+    private void OnDestroy()
+    {
+        sound.stop(STOP_MODE.IMMEDIATE);
+    }
 }
