@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CupContainer : MonoBehaviour
 {
-    public readonly List<string> contents = new List<string>();
+    [SerializeField] public List<string> contents = new List<string>();
+    [SerializeField] GameObject fill;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,14 @@ public class CupContainer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (contents.Count > 0)
+        {
+            fill.SetActive(true);
+        }
+        else
+        {
+            fill.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -34,4 +42,5 @@ public class CupContainer : MonoBehaviour
             }
         }
     }
+    
 }

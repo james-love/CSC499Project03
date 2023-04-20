@@ -61,7 +61,6 @@ public class PourDetector : MonoBehaviour
         GameObject streamObject = Instantiate(streamPrefab, origin.position, Quaternion.identity, transform);
         streamObject.AddComponent<CapsuleCollider>();
         streamObject.GetComponent<CapsuleCollider>().isTrigger = false;
-        streamObject.transform.tag = content;
         return streamObject.GetComponent<Stream>();
     }
 
