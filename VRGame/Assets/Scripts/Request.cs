@@ -1,70 +1,72 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Request : MonoBehaviour
 {
     public List<string> request = new List<string>();
+    [SerializeField] GameObject happy;
+    [SerializeField] GameObject angry;
+    private Animator leave;
     // Start is called before the first frame update
-    
+
+    private void Awake()
+    {
+        leave = GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.CompareTag("Cup"))
+        if (other.transform.CompareTag("Cup"))
         {
             other.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             other.transform.rotation = Quaternion.identity;
             other.GetComponent<Rigidbody>().freezeRotation = true;
             other.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-            float grade = CalculateScore(other.gameObject);
-            string letterGrade = CalculateGrade(grade);
-            print("You got a " + letterGrade);
+            bool match = matching(other.gameObject);
+            CustomerApproval(match);
+            leave.SetBool("Leave",true);
+            other.gameObject.SetActive(false);
         }
     }
 
-    private string CalculateGrade(float grade)
+    private void CustomerApproval(bool match)
     {
-        string res;
-        if (grade >= 90)
+        if (match)
         {
-            res = "A";
-        }
-        else if (grade >= 80)
-        {
-            res = "B";
-        }
-        else if (grade >= 70)
-        {
-            res = "C";
-        }
-        else if (grade >= 60)
-        {
-            res = "D";
+            angry.SetActive(false);
+            happy.SetActive(true);
         }
         else
         {
-            res = "F";
+            happy.SetActive(false);
+            angry.SetActive(true);
         }
-        return res;
     }
 
-    private float CalculateScore(GameObject container)
+    private bool matching(GameObject container)
     {
-        int score = 0;
-        float maxScore = 5f * request.Count;
-        // TODO get score calculator working. needs to accurately reflect if elements are in the cup.
-        foreach (string content in container.GetComponent<CupContainer>().contents) {
-            if (request.Contains(content))
+        var check = container.GetComponent<CupContainer>().contents;
+        if (request.Count == check.Count)
+        {
+            foreach (string content in request)
             {
-                score += 5;
-                print(content);
+                if (check.Contains(content))
+                {
+                    check.Remove(content);
+                }
+                if (check.Count == 0)
+                {
+                    break;
+                }
             }
-            else
-            {
-                score -= 1;
-                print(content);
-            }
+            bool match = check.Count == 0;
+            return match;
         }
-            
-        return (float)score/maxScore*100;
-    }
+        else
+        {
+            return false;
+        }
 
+    }
 }
