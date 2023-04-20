@@ -1,15 +1,12 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     public void StartClicked()
     {
-    
-        SceneManager.LoadScene("VRGame");
-    
-}
+        LevelManager.Instance.LoadLevel(1);
+    }
 
     public void ExitClicked()
     {
