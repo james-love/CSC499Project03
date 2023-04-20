@@ -31,23 +31,28 @@ public class LevelManager : MonoBehaviour
         Loading = true;
         Time.timeScale = 0;
         fadeTransition.SetTrigger("Start");
-        yield return new WaitUntil(() => AnimationFinished(fadeTransition, "TransitionStart"));
+        yield return new WaitUntil(() => Utility.AnimationFinished(fadeTransition, "TransitionStart"));
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
         while (!operation.isDone)
             yield return null;
 
-        Player.Instance.gameObject.transform.position = new Vector3(6.92f, 0.62f, -19.73f);
-        Player.Instance.gameObject.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        switch (levelIndex)
+        {
+            case 0:
+                Player.Instance.gameObject.transform.position = new Vector3(0f, 0f, 0f);
+                Player.Instance.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                break;
+            case 1:
+                Player.Instance.gameObject.transform.position = new Vector3(6.92f, 0.62f, -19.73f);
+                Player.Instance.gameObject.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+                break;
+            default:
+                break;
+        }
 
         fadeTransition.SetTrigger("Loaded");
         Loading = false;
         Time.timeScale = 1;
-    }
-
-    private bool AnimationFinished(Animator animator, string animation)
-    {
-        return animator.GetCurrentAnimatorStateInfo(0).IsName(animation) &&
-            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1;
     }
 }

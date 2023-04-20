@@ -66,10 +66,10 @@ public class AudioManager : MonoBehaviour
         musicEventInstance.start();
     }
 
-    private EventInstance CreateInstance(EventReference eventRef)
+    public EventInstance CreateInstance(EventReference eventRef)
     {
         EventInstance eventInstance = RuntimeManager.CreateInstance(eventRef);
-        eventInstances.Add(eventInstance);
+        //eventInstances.Add(eventInstance);
         return eventInstance;
     }
 }

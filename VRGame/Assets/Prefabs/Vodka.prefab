@@ -4845,6 +4845,7 @@ GameObject:
   - component: {fileID: 8807170041624545234}
   - component: {fileID: 7680349306463420537}
   - component: {fileID: 5517353626919214832}
+  - component: {fileID: 756468589953747044}
   m_Layer: 0
   m_Name: Vodka
   m_TagString: Untagged
@@ -7339,10 +7340,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7680349306463420537}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: Grab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7680349306463420537}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: LetGo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -7437,7 +7462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfec5e57c07b55648adcc91d3f87f1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stream: {fileID: 7088581091965619848}
+  stream: {fileID: 547276352650412932}
+  grabbable: 1
 --- !u!114 &5517353626919214832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7483,6 +7509,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &756468589953747044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807170041624545245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b0dd6e556aa5d449931849f42aa7f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &8807170042390721404
 GameObject:
   m_ObjectHideFlags: 0

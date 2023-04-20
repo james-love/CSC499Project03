@@ -3693,6 +3693,7 @@ GameObject:
   - component: {fileID: 6367660735265807897}
   - component: {fileID: 1510695188217150071}
   - component: {fileID: 4205199184349279494}
+  - component: {fileID: 2574385115627852995}
   m_Layer: 0
   m_Name: Teleport Interactor
   m_TagString: Untagged
@@ -3749,7 +3750,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2574385115627852995}
+        m_TargetAssemblyTypeName: Sounds, Assembly-CSharp
+        m_MethodName: Teleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_OnHoverEntered:
@@ -4277,6 +4290,18 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &2574385115627852995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367660735265807899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902292ef43dcd3748a245fa922b60242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6469544630309687918
 GameObject:
   m_ObjectHideFlags: 0
@@ -4730,7 +4755,7 @@ GameObject:
   - component: {fileID: 3449252790012767641}
   m_Layer: 2
   m_Name: XR Origin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

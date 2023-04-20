@@ -51,6 +51,11 @@ public class PauseMenuNoHandTracking : MonoBehaviour
         PlayerPrefs.SetFloat("volume", newValue);
     }
 
+    public void RestartClicked()
+    {
+        LevelManager.Instance.LoadLevel(0);
+    }
+
     private void UpdateVolumeDisplay()
     {
         musicIcon.sprite = AudioManager.Instance.MusicMute ? muteMusicIcon : unMuteMusicIcon;

@@ -412,10 +412,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286948165219136}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: BeerTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286948165219136}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: UpdateLever
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -459,34 +483,10 @@ MonoBehaviour:
   m_MinAngle: 0
   m_OnLeverActivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286948165219136}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: deactivate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnLeverDeactivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286948165219136}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &941286948165219136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,7 +499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfec5e57c07b55648adcc91d3f87f1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stream: {fileID: 941286949454116520}
+  stream: {fileID: 941286949454116524}
+  grabbable: 0
 --- !u!1 &941286948323155098
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +550,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -6242,10 +6243,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286949001361171}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: BeerTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286949001361171}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: UpdateLever
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -6289,34 +6314,10 @@ MonoBehaviour:
   m_MinAngle: 0
   m_OnLeverActivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286949001361171}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: deactivate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnLeverDeactivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286949001361171}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &941286949001361171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6329,7 +6330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfec5e57c07b55648adcc91d3f87f1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stream: {fileID: 941286948323155098}
+  stream: {fileID: 941286948323155102}
+  grabbable: 0
 --- !u!1 &941286949004246400
 GameObject:
   m_ObjectHideFlags: 0
@@ -6379,7 +6381,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -12072,10 +12074,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286949041899529}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: BeerTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286949041899529}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: UpdateLever
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -12119,34 +12145,10 @@ MonoBehaviour:
   m_MinAngle: 0
   m_OnLeverActivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286949041899529}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: deactivate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnLeverDeactivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286949041899529}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &941286949041899529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12159,7 +12161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfec5e57c07b55648adcc91d3f87f1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stream: {fileID: 941286950145311318}
+  stream: {fileID: 941286950145311402}
+  grabbable: 0
 --- !u!1 &941286949059956070
 GameObject:
   m_ObjectHideFlags: 0
@@ -12209,7 +12212,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -18078,7 +18081,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -23771,10 +23774,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286950055189573}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: BeerTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286950055189573}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: UpdateLever
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -23818,34 +23845,10 @@ MonoBehaviour:
   m_MinAngle: 0
   m_OnLeverActivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286950055189573}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: deactivate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnLeverDeactivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286950055189573}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &941286950055189573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23858,7 +23861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfec5e57c07b55648adcc91d3f87f1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stream: {fileID: 941286949059956070}
+  stream: {fileID: 941286949059956090}
+  grabbable: 0
 --- !u!1 &941286950145311318
 GameObject:
   m_ObjectHideFlags: 0
@@ -23908,7 +23912,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -29098,10 +29102,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286950286198478}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: BeerTap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 941286950286198478}
+        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
+        m_MethodName: UpdateLever
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls: []
@@ -29145,34 +29173,10 @@ MonoBehaviour:
   m_MinAngle: 0
   m_OnLeverActivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286950286198478}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: deactivate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnLeverDeactivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941286950286198478}
-        m_TargetAssemblyTypeName: TapDetector, Assembly-CSharp
-        m_MethodName: activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &941286950286198478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29185,4 +29189,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfec5e57c07b55648adcc91d3f87f1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stream: {fileID: 941286949004246400}
+  stream: {fileID: 941286949004246405}
+  grabbable: 0

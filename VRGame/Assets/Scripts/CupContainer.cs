@@ -32,9 +32,5 @@ public class CupContainer : MonoBehaviour
             var newcolor = Color.Lerp(othercolor, rend.material.color, 0.5f);
             rend.material.color = newcolor;
         }
-        
     }
-
-    
-    
 }

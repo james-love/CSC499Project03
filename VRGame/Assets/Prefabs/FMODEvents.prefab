@@ -65,3 +65,73 @@ MonoBehaviour:
       Data3: -1325233278
       Data4: 213711997
     Path: event:/MusicPlay
+  <Teleport>k__BackingField:
+    Guid:
+      Data1: -604812231
+      Data2: 1335537508
+      Data3: -1093041228
+      Data4: -1282404894
+    Path: event:/Teleport
+  <Glass>k__BackingField:
+    Guid:
+      Data1: 580859768
+      Data2: 1178251406
+      Data3: -328421495
+      Data4: 340007205
+    Path: event:/GlassBump
+  <Can>k__BackingField:
+    Guid:
+      Data1: 1857445347
+      Data2: 1226493206
+      Data3: -1604727620
+      Data4: -1186360531
+    Path: event:/CanBump
+  <Plastic>k__BackingField:
+    Guid:
+      Data1: 1400714435
+      Data2: 1200260746
+      Data3: -684978523
+      Data4: 2058025231
+    Path: event:/PlasticBump
+  <Pouring>k__BackingField:
+    Guid:
+      Data1: 1305149968
+      Data2: 1258953072
+      Data3: -1594317428
+      Data4: 1154707122
+    Path: event:/Pouring
+  <Angry>k__BackingField:
+    Guid:
+      Data1: 1442234868
+      Data2: 1341302323
+      Data3: -1711389802
+      Data4: 1576187709
+    Path: event:/AngryGrunt
+  <Happy>k__BackingField:
+    Guid:
+      Data1: -2043731470
+      Data2: 1080901722
+      Data3: 924994184
+      Data4: -1875447610
+    Path: event:/HappySound
+  <Win>k__BackingField:
+    Guid:
+      Data1: 1569148764
+      Data2: 1100649651
+      Data3: 1273815964
+      Data4: -1320280750
+    Path: event:/Win
+  <Lose>k__BackingField:
+    Guid:
+      Data1: -798312678
+      Data2: 1223185503
+      Data3: -604886387
+      Data4: -333005622
+    Path: event:/Lose
+  <Scream>k__BackingField:
+    Guid:
+      Data1: 332328720
+      Data2: 1194343121
+      Data3: -943661696
+      Data4: -686826125
+    Path: event:/Sceam

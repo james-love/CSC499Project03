@@ -1,8 +1,10 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Request : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class Request : MonoBehaviour
     [SerializeField] GameObject angry;
     [SerializeField] CanvasGroup requestCanvas;
     [SerializeField] TextMeshProUGUI requestText;
+    public UnityEvent<bool> requestFinished;
     private Animator leave;
     // Start is called before the first frame update
 
@@ -26,7 +29,7 @@ public class Request : MonoBehaviour
 
     private void Awake()
     {
-        leave = GetComponent<Animator>();
+        leave = GetComponentInParent<Animator>();
         requestText.text = request.Aggregate(string.Empty, (acc, cur) => $"{acc}{(acc == string.Empty ? string.Empty : "\n")}{cur}");
     }
 
@@ -42,7 +45,14 @@ public class Request : MonoBehaviour
             CustomerApproval(match);
             leave.SetBool("Leave",true);
             other.gameObject.SetActive(false);
+            StartCoroutine(RequestFinished(match));
         }
+    }
+
+    private IEnumerator RequestFinished(bool match)
+    {
+        yield return new WaitUntil(() => Utility.AnimationFinished(leave, "Leave"));
+        requestFinished.Invoke(match);
     }
 
     private void CustomerApproval(bool match)
@@ -51,11 +61,13 @@ public class Request : MonoBehaviour
         {
             angry.SetActive(false);
             happy.SetActive(true);
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Happy, transform.position);
         }
         else
         {
             happy.SetActive(false);
             angry.SetActive(true);
+            AudioManager.Instance.PlayOneShot(FMODEvents.Instance.Angry, transform.position);
         }
     }
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{fbfe3faa-155e-4b54-8e92-dd349ba685d7}">
+		<property name="assetPath">
+			<value>glasses clink_11.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.33034013605442175</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e90e31a9-0782-4324-b8ee-84d9a383f903}</destination>
+		</relationship>
+	</object>
+</objects>
